@@ -1,0 +1,22 @@
+name: advanced-python
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - ipython
+  - jupyterlab
+  - notebook
+  - jupyter_contrib_nbextensions
+  - matplotlib
+  - seaborn  # for the dataset
+  - numpy
+  - pandas
+  - pip
+  - uv
+  - scipy
+  - wget
+  - hist
+  - mplhep
+  - pip:
+      - zfit
+      - jupyterlab-rise  # for jupyter notebook presentations
