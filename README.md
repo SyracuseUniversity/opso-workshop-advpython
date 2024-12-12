@@ -12,6 +12,10 @@ This tutorial covers more advanced topics in Python for data analysis. It is aim
 
 ## Installation
 
+**If the installation fails, you can just run it in the cloud using Binder:**
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SyracuseUniversity/ospo-workshop-advpython/HEAD)
+
 Clone the repository and install the required packages using the following commands (use `mamba` instead of `conda` if you have it installed):
 
 ```bash
@@ -31,4 +35,4 @@ conda activate advanced-python
 
 ## Credits
 
-Large parts of this tutorial [LHCb analysis essentials](https://github.com/hsf-training/analysis-essentials) tutorials.
+Parts of this tutorial [LHCb analysis essentials](https://github.com/hsf-training/analysis-essentials) tutorials and from the [Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/). Many thanks to the authors for making their work available.
