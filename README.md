@@ -48,7 +48,21 @@ Activate the environment by running:
 mamba activate advanced-python
 ```
 
+Finally, start Jupyter by running:
 
+```bash
+jupyter notebook
+```
+
+or
+```bash
+jupyter lab
+```
+for a slightly different experience
+
+### If all installs fail
+
+Alternatively, you can also use colaboratory to run the notebooks. Therefore, open the link https://colab.research.google.com/ and select the "GitHub" tab. Enter the URL of this repository (https://github.com/SyracuseUniversity/ospo-workshop-advpython) and select the notebook you want to run.
 
 ## Credits
 
