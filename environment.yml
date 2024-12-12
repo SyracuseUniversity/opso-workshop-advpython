@@ -8,6 +8,7 @@ dependencies:
   - notebook
   - jupyter_contrib_nbextensions
   - matplotlib
+  - scikit-learn  # for the dataset
   - seaborn  # for the dataset
   - numpy
   - pandas
