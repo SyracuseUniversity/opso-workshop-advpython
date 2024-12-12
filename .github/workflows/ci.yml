@@ -23,9 +23,6 @@ jobs:
       - uses: mamba-org/setup-micromamba@v2
         with:
           environment-file: environment.yml
-          init-shell: >-
-            bash
-            powershell
 
       - shell: bash -l {0}
         name: Install dependencies
