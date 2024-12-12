@@ -95,7 +95,7 @@ TypeError: Can't instantiate abstract class BaseData without an implementation f
 
 **b.** Recreate the `JSONData` class by inheriting from `BaseData` and adding to it the `load` function you created for `JSONLoader` above. When complete, you should be able to initialize and use `JSONData` in the same manner as in exercise 4 above, and get the same result.
 
-**c.** Now create the `NPYData` class that also inherits from `BaseData` but implements it's own `load` function that can read the `data.npy` file and store it as a dictionary, as you did with `JSONData`. The `load` function should have the something like the following in it:
+**c.** Now create the `NPYData` class that also inherits from `BaseData` but implements it's own `load` function that can read the `data.npy` file and store it as a dictionary, as you did with `JSONData`. The `load` function should have something like the following in it:
 ```python
 data_array = numpy.load(filename)
 data = {'x': data_array[:,0], 'y': data_array[:,1]}
