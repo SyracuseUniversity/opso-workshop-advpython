@@ -7,28 +7,45 @@ This tutorial covers more advanced topics in Python for data analysis. It is aim
 
 - Session 1: Introduction to Python classes
 - Session 2: Advanced function signature; Exceptions
-- Session 3: Data visualization & manipulation
+- Session 3: Data handling & manipulation
 - Session 4: Statistics; curve fitting
 
 ## Installation
 
-**If the installation fails, you can just run it in the cloud using Binder:**
+**If the installation fails**, you can just run it in the cloud using Binder:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SyracuseUniversity/ospo-workshop-advpython/HEAD)
 
-Clone the repository and install the required packages using the following commands (use `mamba` instead of `conda` if you have it installed):
+
+Clone the repository and install the required packages using the following commands (use `conda` instead of `mamba` if mamba is not installed):
 
 ```bash
 git clone https://github.com/SyracuseUniversity/ospo-workshop-advpython.git
 cd ospo-workshop-advpython
+```
 
-conda env create -f environment.yml
+Create a new conda environment with the required packages:
+
+```bash
+mamba env create -f environment.yml
+```
+
+If you already have the environment created, you can update it with:
+
+```bash
+mamba env update --file environment.yml --prune
+```
+
+or recreate it with:
+
+```bash
+mamba env create -f environment.yml -y
 ```
 
 Activate the environment by running:
 
 ```bash
-conda activate advanced-python
+mamba activate advanced-python
 ```
 
 
