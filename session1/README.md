@@ -2,7 +2,7 @@
 
 The `tutorial.ipynb` provides an introduction to Python classes (we will do this together in the workshop). The exercises below illustrate some of the concepts discussed in the tutorial. If you get stuck, solutions for each problem can be found in the `.solution{X}.py` file where `{X}` corresponds to the problem number.
 
-**Note: exercises 3-5 require `numpy` to be installed. If you have not installed it yet, you can do so by running the following after activating your conda environment:
+*Note:* exercises 3-5 require `numpy` to be installed. If you have not installed it yet, you can do so by running the following after activating your conda environment:
 
 ```bash
 conda install -c conda-forge -y numpy
