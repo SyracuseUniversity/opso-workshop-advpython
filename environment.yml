@@ -14,7 +14,6 @@ dependencies:
   - pip
   - uv
   - scipy
-  - wget
   - hist
   - mplhep
   - pip:
