@@ -1,6 +1,18 @@
-The exercises below will help you practice using and understanding classes. If you get stuck, solutions for each problem can be found in the `.solution{X}.py` file where `{X}` corresponds to the problem number.
+# Object Oriented Programming with Python
 
-1. **Scope practice:** What's wrong with the following code? Fix it.
+The `tutorial.ipynb` provides an introduction to Python classes (we will do this together in the workshop). The exercises below illustrate some of the concepts discussed in the tutorial. If you get stuck, solutions for each problem can be found in the `.solution{X}.py` file where `{X}` corresponds to the problem number.
+
+**Note: exercises 3-5 require `numpy` to be installed. If you have not installed it yet, you can do so by running the following after activating your conda environment:
+
+```bash
+conda install -c conda-forge -y numpy
+```
+
+## Exercises
+
+### 1. Scope practice
+
+What's wrong with the following code? Fix it.
 
 ```python
 x = 10
@@ -16,14 +28,18 @@ for x in [1, 2, '']:
 print(f(3,4))
 ```
 
-2. **Simple class construction:** Construct a class called `Simple` that takes in a single parameter at initialization and saves it as an attribute called `param`. Add to the class a function called `print` that when called prints to screen `The parameter is ` followed by the parameter. For example, you should be able to initialize the class and do the following:
+### 2. Simple class construction
+
+Construct a class called `Simple` that takes in a single parameter at initialization and saves it as an attribute called `param`. Add to the class a function called `print` that when called prints to screen `The parameter is ` followed by the parameter. For example, you should be able to initialize the class and do the following:
 ```
 >>> simple = Simple(10)
 >>> simple.print()
 'The parameter is 10'
 ```
 
-3. **Class construction:** In this directory there is a JSON file called `data.json`. It contains two sets of data called `x` and `y`. The following function will load the data into memory as a dictionary of numpy arrays:
+### 3. Class construction
+
+In this directory there is a JSON file called `data.json`. It contains two sets of data called `x` and `y`. The following function will load the data into memory as a dictionary of numpy arrays:
 ```python
 import json
 import numpy
@@ -58,7 +74,9 @@ Write a class called `JSONLoader` that takes the filename upon initialization an
 ```
 The last line should result in a file called `data.csv` to be written containing the data with comma separated columns.
 
-4. **Inheritance:** Write a class that called `JSONData` inherits from the `JSONLoader` class you created in the previous exercise and adds to it a function called `weighted_mean` that will calculate `sum(x*y)/sum(y)` on the data dictionary's `x` and `y` elements. When complete, you should be able to do the following:
+### 4. Inheritance
+
+Write a class that called `JSONData` inherits from the `JSONLoader` class you created in the previous exercise and adds to it a function called `weighted_mean` that will calculate `sum(x*y)/sum(y)` on the data dictionary's `x` and `y` elements. When complete, you should be able to do the following:
 ```python
 >>> jsdata = JSONData('data.json')
 >>> jsdata.load()
@@ -66,16 +84,18 @@ The last line should result in a file called `data.csv` to be written containing
 np.float64(0.0)
 ```
 
-5. **Abstract base class:** In the directory there is another file called `data.npy`. This contains the same data as in `data.json`, but it's in a different file format. Here, we will write a class called `NPYData` that can load this type of file, and provide the same API as the `JSONData` class you wrote above. To do that, we'll first define an abstract base class that contains all the common methods between the `JSONData` and `NPYData`, except for the `load` function. We'll then redefine the `JSONData` class to use the abstract base class, and create the `NPYData` class to do the same.
+### 5. Abstract base classes
 
-a. Create an abstract base class called `BaseData` that has the same `__init__`, `writecsv` and `weighted_mean` functions you wrote for `JSONLoader` and `JSONData` above, and that makes `load` an `abstractmethod`. When complete, it should not be possible to initialize this class. If you try it, you should get the following error:
+In the directory there is another file called `data.npy`. This contains the same data as in `data.json`, but it's in a different file format. Here, we will write a class called `NPYData` that can load this type of file, and provide the same API as the `JSONData` class you wrote above. To do that, we'll first define an abstract base class that contains all the common methods between the `JSONData` and `NPYData`, except for the `load` function. We'll then redefine the `JSONData` class to use the abstract base class, and create the `NPYData` class to do the same.
+
+**a.** Create an abstract base class called `BaseData` that has the same `__init__`, `writecsv` and `weighted_mean` functions you wrote for `JSONLoader` and `JSONData` above, and that makes `load` an `abstractmethod`. (You'll need to import `ABC` and `abstractmethod` from the `abc` module to do this.) When complete, it should not be possible to initialize this class. If you try it, you should get the following error:
 ```
 TypeError: Can't instantiate abstract class BaseData without an implementation for abstract method 'load'
 ```
 
-b. Recreate the `JSONData` class by inheriting from `BaseData` and adding to it the `load` function you created for `JSONLoader` above. When complete, you should be able to initialize and use `JSONData` in the same manner as in exercise 4 above, and get the same result.
+**b.** Recreate the `JSONData` class by inheriting from `BaseData` and adding to it the `load` function you created for `JSONLoader` above. When complete, you should be able to initialize and use `JSONData` in the same manner as in exercise 4 above, and get the same result.
 
-c. Now create the `NPYData` class that also inherits from `BaseData` but implements it's own `load` function that can read the `data.npy` file and store it as a dictionary, as you did with `JSONData`. The `load` function should have the something like the following in it:
+**c.** Now create the `NPYData` class that also inherits from `BaseData` but implements it's own `load` function that can read the `data.npy` file and store it as a dictionary, as you did with `JSONData`. The `load` function should have the something like the following in it:
 ```python
 data_array = numpy.load(filename)
 data = {'x': data_array[:,0], 'y': data_array[:,1]}
