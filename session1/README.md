@@ -68,8 +68,8 @@ Write a class called `JSONLoader` that takes the filename upon initialization an
 >>> js = JSONLoader('data.json')
 >>> js.load()
 >>> print(js.data)
-{'x': array([-2. , -1.6, -1.2, -0.8, -0.4,  0. ,  0.4,  0.8,  1.2,  1.6]),
- 'y': array([0.14, 0.28, 0.49, 0.73, 0.92, 1.  , 0.92, 0.73, 0.49, 0.28])}
+{'x': array([-2. , -1.6, -1.2, -0.8, -0.4,  0. ,  0.4,  0.8,  1.2,  1.6,  2. ]),
+ 'y': array([0.05, 0.11, 0.19, 0.29, 0.37, 0.4 , 0.37, 0.29, 0.19, 0.11, 0.05])}
 >>> js.writecsv('data.csv')
 ```
 The last line should result in a file called `data.csv` to be written containing the data with comma separated columns.
