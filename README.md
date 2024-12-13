@@ -68,5 +68,6 @@ repository (https://github.com/SyracuseUniversity/ospo-workshop-advpython) and s
 
 ## Credits
 
-Parts of this tutorial [LHCb analysis essentials](https://github.com/hsf-training/analysis-essentials) tutorials and from
-the [Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/). Many thanks to the authors for making their work available.
+Parts of this tutorial [LHCb analysis essentials](https://github.com/hsf-training/analysis-essentials) tutorials, from
+the [Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) and from J.R.
+Johansson [Python lectures](http://github.com/jrjohansson/scientific-python-lectures)

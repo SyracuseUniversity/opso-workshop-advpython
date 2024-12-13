@@ -14,15 +14,15 @@ repos:
 
   # Notebook formatting
 # if uncommented, this will format notebooks but since it's a tutorial, we may _want_ sometimes "bad" code
-#  - repo: https://github.com/nbQA-dev/nbQA
-#    rev: 1.8.5
-#    hooks:
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.8.5
+    hooks:
 #      - id: nbqa-isort
 #        additional_dependencies: [ isort ]
-#
-#      - id: nbqa-pyupgrade
-#        additional_dependencies: [ pyupgrade ]
-#        args: [ --py39-plus ]
+
+      - id: nbqa-pyupgrade
+        additional_dependencies: [ pyupgrade ]
+        args: [ --py39-plus ]
   #
   #  - repo: https://github.com/ambv/black
   #    rev: 21.9b0

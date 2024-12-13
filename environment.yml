@@ -10,6 +10,7 @@ dependencies:
   - matplotlib
   - scikit-learn  # for the dataset
   - seaborn  # for the dataset
+  - matplotlib
   - numpy
   - pandas
   - pip
@@ -17,6 +18,7 @@ dependencies:
   - scipy
   - hist
   - mplhep
+  - scienceplots
   - numexpr
   - pip:
       - zfit
