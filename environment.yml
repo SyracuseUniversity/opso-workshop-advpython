@@ -17,9 +17,7 @@ dependencies:
   - scipy
   - hist
   - mplhep
-  - pytest  # to test run the notebooks
-  - pytest-xdist
-  - nbval
+  - numexpr
   - pip:
       - zfit
       - jupyterlab-rise  # for jupyter notebook presentations

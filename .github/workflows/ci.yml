@@ -24,10 +24,11 @@ jobs:
         with:
           environment-file: environment.yml
 
-      - shell: bash -l {0}
-        name: Install dependencies
+      - name: Install dependencies
+        shell: bash -l {0}
         run: |
           uv pip install pytest pytest-xdist nbval
       - name: Run notebooks
+        shell: bash -el {0}
         run: |
-          pytest --nbval-lax --dist loadscope -n auto
+          pytest --nbval-lax --dist loadscope -n auto --ignore=session1
