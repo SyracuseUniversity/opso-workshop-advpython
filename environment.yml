@@ -19,6 +19,7 @@ dependencies:
   - hist
   - mplhep
   - scienceplots
+  - uproot  # HEP data format
   - numexpr
   - pip:
       - zfit
