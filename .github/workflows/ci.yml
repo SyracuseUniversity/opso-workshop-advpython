@@ -23,6 +23,7 @@ jobs:
       - uses: mamba-org/setup-micromamba@v2
         with:
           environment-file: environment.yml
+          cache-environment: true
 
       - name: Install dependencies
         shell: bash -l {0}
