@@ -28,12 +28,11 @@ jobs:
       - name: Install dependencies
         shell: bash -l {0}
         run: |
-          uv pip install pytest pytest-xdist nbval
+          uv pip install pytest pytest-xdist nbval  # install dependencies for testrun
       - name: Run notebooks
         shell: bash -el {0}
         run: |
           pytest --nbval-lax --dist loadscope -n auto --ignore=session1
-
 
   pre-commit:
     name: pre-commit fixes (cleans notebooks etc.)
